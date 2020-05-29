@@ -3398,13 +3398,6 @@ var SensorPermission = {
 };
 function _DeviceRun() {
  window.alert("Start permission progless.");
- if (DeviceMotionEvent && DeviceMotionEvent.requestPermission && typeof DeviceMotionEvent.requestPermission === "function") {
-  DeviceMotionEvent.requestPermission();
- }
- if (DeviceOrientationEvent && DeviceOrientationEvent.requestPermission && typeof DeviceOrientationEvent.requestPermission === "function") {
-  DeviceOrientationEvent.requestPermission();
-  window.alert("DeviceOrientationEvent done.");
- }
  window.alert("finish !");
 }
 function _JS_Cursor_SetImage(ptr, length) {
