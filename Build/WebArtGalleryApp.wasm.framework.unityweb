@@ -3357,6 +3357,10 @@ __ATINIT__.push({
  })
 }, {
  func: (function() {
+  __GLOBAL__sub_I_Il2CppCodeRegistration_cpp();
+ })
+}, {
+ func: (function() {
   __GLOBAL__sub_I_Lump_libil2cpp_metadata_cpp();
  })
 }, {
@@ -3366,10 +3370,6 @@ __ATINIT__.push({
 }, {
  func: (function() {
   __GLOBAL__sub_I_Lump_libil2cpp_gc_cpp();
- })
-}, {
- func: (function() {
-  __GLOBAL__sub_I_Il2CppCodeRegistration_cpp();
  })
 }, {
  func: (function() {
@@ -3383,7 +3383,12 @@ var tempDoublePtr = STATICTOP;
 STATICTOP += 16;
 assert(tempDoublePtr % 8 == 0);
 function _Hello() {
- popupOpen("requestPermissionPopup");
+ if (DeviceMotionEvent && DeviceMotionEvent.requestPermission && typeof DeviceMotionEvent.requestPermission === "function") {
+  DeviceMotionEvent.requestPermission();
+ }
+ if (DeviceOrientationEvent && DeviceOrientationEvent.requestPermission && typeof DeviceOrientationEvent.requestPermission === "function") {
+  DeviceOrientationEvent.requestPermission();
+ }
 }
 function _JS_Cursor_SetImage(ptr, length) {
  var binary = "";
