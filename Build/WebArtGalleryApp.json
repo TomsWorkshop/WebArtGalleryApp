@@ -1,6 +1,6 @@
 {
 "companyName": "DefaultCompany",
-"productName": "building",
+"productName": "WebArtGallery",
 "productVersion": "0.1",
 "dataUrl": "WebArtGalleryApp.data.unityweb",
 "wasmCodeUrl": "WebArtGalleryApp.wasm.code.unityweb",
